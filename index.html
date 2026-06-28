@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="login-page" id="loginPage">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-icon">✦</div>
+                <h1>Play Music</h1>
+                <p>Tugas ASD Kelompok 2 Joss Jiss</p>
+            </div>
+
+            <div class="login-form">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="loginUsername" placeholder="Masukkan username" maxlength="20" />
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="loginPassword" placeholder="Masukkan password" maxlength="20" />
+                </div>
+                <button id="loginSubmitBtn" class="btn-login">🚀 Masuk</button>
+                <div class="login-hint">
+                    <span>👤 Login Pakai ini | Username : user | Pw : 123</span>
+                </div>
+                <div id="loginError" class="login-error hidden"></div>
+            </div>
+
+            <div class="login-footer">
+                <span>© 2026 Risyah Music</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

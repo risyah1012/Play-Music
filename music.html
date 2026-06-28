@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5" />
+    <title>Menu Utama</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container" id="app">
+        <!-- ===== HEADER ===== -->
+        <div class="header">
+            <h1>✦ Play Music</h1>
+            <div class="user-area">
+                <span id="userDisplay" class="user-display">👤 User</span>
+                <button id="logoutBtn" class="btn-logout">🚪 Keluar</button>
+            </div>
+        </div>
+
+        <!-- ===== NOTIF ===== -->
+        <div id="notification" class="notification hidden"></div>
+
+        <!-- ===== PLAYLIST ===== -->
+        <div class="playlist-section">
+            <div class="playlist-header">
+                <span>🎵 Total Lagu: <span id="total-songs">0</span></span>
+                <button id="clearBtn" class="btn-danger">🗑 Kosongkan</button>
+            </div>
+            <div id="playlist-container"></div>
+        </div>
+
+        <!-- ===== NOW PLAYING ===== -->
+        <div class="now-playing-section">
+            <div class="now-playing">
+                <span class="label">▶ NOW PLAYING</span>
+                <span id="current-song">-</span>
+                <span id="current-artist">-</span>
+            </div>
+        </div>
+
+        <!-- ===== CONTROLS ===== -->
+        <div class="controls-section">
+            <div class="controls">
+                <button id="prevBtn" class="btn-control">⏮ Prev</button>
+                <button id="playBtn" class="btn-control btn-play">▶ Play</button>
+                <button id="nextBtn" class="btn-control">Next ⏭</button>
+                <button id="shuffleBtn" class="btn-control btn-shuffle" title="Acak">🔀</button>
+                <button id="repeatBtn" class="btn-control btn-repeat" title="Ulang">🔁</button>
+            </div>
+
+            <div class="progress-bar">
+                <span id="current-time">0:00</span>
+                <input type="range" id="progress" min="0" max="100" value="0" />
+                <span id="total-duration">0:00</span>
+            </div>
+
+            <div class="volume-control">
+                <span>🔊</span>
+                <input type="range" id="volume" min="0" max="1" step="0.05" value="0.8" />
+            </div>
+        </div>
+
+        <!-- ===== TAMBAH LAGU ===== -->
+        <div class="add-song-section">
+            <h3>➕ Tambah Lagu</h3>
+            <div class="add-form">
+                <div class="row">
+                    <input type="text" id="songTitle" placeholder="Judul Lagu" />
+                    <input type="text" id="songArtist" placeholder="Nama Artis" />
+                </div>
+                <div class="row file-row">
+                    <div class="file-input-wrapper">
+                        <button id="fileBtn" class="btn-file">📁 Pilih File</button>
+                        <span id="fileName" class="file-name">Belum ada file</span>
+                        <input type="file" id="songFile" accept=".mp3,.wav,.ogg,.m4a" style="display:none;" />
+                    </div>
+                    <button id="addBtn" class="btn-add">➕ Tambah</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== AUDIO ===== -->
+    <audio id="audioPlayer"></audio>
+
+    <script src="music.js"></script>
+</body>
+</html>
